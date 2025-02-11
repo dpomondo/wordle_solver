@@ -25,3 +25,6 @@ def filter_by_position(letter, position, word_list):
 
 def exclude_by_letter(letter, word_list):
     return { word for word in word_list if letter not in set(word) }
+
+def include_letter_but_exclude_position(letter, position, word_list):
+    return { w for w in word_list if letter in set(w) and w[position] != letter }
